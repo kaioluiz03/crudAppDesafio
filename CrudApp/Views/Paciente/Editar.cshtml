@@ -1,0 +1,52 @@
+﻿@model PacienteModel
+@{
+    ViewData["Title"] = "Editar dados do Paciente";
+}
+
+<div class=" text-center">
+    <h1 class="display-4">Alterar dados do Paciente</h1>
+</div>
+
+<form asp-controller="Paciente" asp-action="Alterar" method="post">
+
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input asp-for="Nome" type="text" class="form-control" placeholder="Nome do Paciente">
+        @Html.ValidationMessageFor(x => x.Nome)
+    </div>
+
+    <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input asp-for="Cpf" type="text" class="form-control" placeholder="CPF do Paciente">
+        @Html.ValidationMessageFor(x => x.Cpf)
+    </div>
+
+    <div class="form-group">
+        <label for="dataNascimento">Data de Nascimento</label>
+        <input asp-for="DataNascimento" type="text" class="form-control" placeholder="Data de Nascimento do Paciente">
+        @Html.ValidationMessageFor(x => x.DataNascimento)
+    </div>
+
+    <div class="form-group">
+        <label for="sexo">Gênero Sexual</label>
+        <input asp-for="Sexo" type="text" class="form-control" placeholder="Gênero Sexual do Paciente">
+        @Html.ValidationMessageFor(x => x.Sexo)
+    </div>
+
+    <div class="form-group">
+        <label for="telefone">Telefone de Contato</label>
+        <input asp-for="Telefone" type="text" class="form-control" placeholder="Telefone do Paciente">
+        @Html.ValidationMessageFor(x => x.Telefone)
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input asp-for="Email" type="email" class="form-control" placeholder="E-mail do Paciente">
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Alterar Dados</button>
+    <a class="btn btn-secondary" asp-controller="Paciente" asp-action="Index" role="button">Voltar</a>
+
+</form>

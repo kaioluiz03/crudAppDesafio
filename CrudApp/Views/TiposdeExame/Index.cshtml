@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Tipos de exames";
+}
+
+<h1 class="display-4">Tipos de Exames</h1>
+
+
+<br/>
+<div class=" text-center">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tipo de Exame</th>
+            <th scope="col"></th>
+            <th>
+                <div>
+                    <a class="btn btn-primary" role="button" asp-controller="TiposdeExame" asp-action="Criar">Adicionar Novo Tipo</a>
+                </div>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Hemograma</td>
+                <td>Colocar descrição sobre o nome do tipo de exame</td>
+                <td>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <a role="button" class="btn btn-warning" asp-controller="TiposdeExame" asp-action="Editar">Editar</a>
+                    <a role="button" class="btn btn-danger" asp-controller="TiposdeExame" asp-action="ApagarConfirmacao">Apagar</a>
+                </div>         
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Radiografia</td>
+                <td>Colocar descrição sobre o nome do tipo de exame</td>
+                <td>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <a role="button" class="btn btn-warning" asp-controller="TiposdeExame" asp-action="Editar">Editar</a>
+                    <a role="button" class="btn btn-danger" asp-controller="TiposdeExame" asp-action="ApagarConfirmacao">Apagar</a>
+                </div>         
+            </tr>
+        </tbody>
+    </table>
+</div>

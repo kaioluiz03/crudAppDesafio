@@ -1,0 +1,14 @@
+﻿@model PacienteModel
+@{
+    ViewData["Title"] = "Confirmar Remoção de Paciente";
+}
+
+<div class="col-md-12 col-xs-12 mt-auto">
+    <div class="text-center">
+        <h3>Realmente deseja apagar os dados do paciente (@Model.Nome)?</h3>
+    </div>
+    <br />
+    <br />
+    <a class="btn btn-warning btn-block" asp-controller="Paciente"  asp-action="Index" role="button">Cancelar</a>
+    <a class="btn btn-danger btn-block" asp-controller="Paciente"  asp-action="Apagar" asp-route-id="@Model.Id" role="button">Apagar dados desse Paciente</a>
+</div>

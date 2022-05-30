@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Criar Tipo de Exame";
+}
+
+<div class=" text-center">
+    <h1 class="display-4">Cadastrar Tipo de Exame</h1>
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="nome">Nome do Tipo de Exame</label>
+    <input type="text" class="form-control" placeholder="Nome do Tipo de Exame">
+  </div>
+
+  <div class="form-group">
+    <label for="descricao">Descrição</label>
+    <input type="text" class="form-control" placeholder="Descrição do Tipo de Exame">
+  </div>
+  <button type="submit" class="btn btn-primary">Adicionar Tipo de Exame</button>
+  <a class="btn btn-secondary" asp-controller="TiposdeExame" asp-action="Index" role="button">Voltar</a>
+</form>
